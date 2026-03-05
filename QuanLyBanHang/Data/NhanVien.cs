@@ -10,11 +10,11 @@ namespace QuanLyBanHang.Data
     internal class NhanVien
     {
         public int ID { get; set; }
-        public string HoVaTen { get; set; }
+        public string HoVaTen { get; set; } = string.Empty;
         public string? DienThoai { get; set; }
         public string? DiaChi { get; set; }
-        public string TenDangNhap { get; set; }
-        public string MatKhau { get; set; }
+        public string TenDangNhap { get; set; } = string.Empty;
+        public string MatKhau { get; set; } = string.Empty;
         public bool QuyenHan { get; set; }
         public virtual ObservableCollectionListSource<HoaDon> HoaDon { get; } = new();
     }

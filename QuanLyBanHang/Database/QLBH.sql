@@ -1,4 +1,5 @@
-USE QLBH;
+
+USE QLBH
 
 -- Xóa dữ liệu các bảng cũ (Nếu có)
 DELETE FROM HoaDon_ChiTiet;
@@ -55,13 +56,13 @@ INSERT INTO HangSanXuat(ID, TenHangSanXuat) VALUES
 SET IDENTITY_INSERT HangSanXuat OFF
 
 INSERT INTO NhanVien(HoVaTen, DienThoai, DiaChi, TenDangNhap, MatKhau, QuyenHan) VALUES
-(N'Nguyễn Văn An', '0123456888', 'Long Xuyên', 'admin', '$2a$11$XGOVk9m4HqzXBlwVvhKN/ur8FS/keV9QyuCwikTL67sL0gqNUupMa', 1),
-(N'Hoàng Thảo My', '0123456999', 'Châu Thành', 'user', '$2a$11$c1syEtekaZ6OJrX77mGoJ.6mu4YuUjUHvKrliW8oOU3M3u7I6zyuy', 0);
+(N'Nguyễn Văn An', '0123456888', N'Long Xuyên', 'admin', '$2a$11$XGOVk9m4HqzXBlwVvhKN/ur8FS/keV9QyuCwikTL67sL0gqNUupMa', 1),
+(N'Hoàng Thảo My', '0123456999', N'Châu Thành', 'user', '$2a$11$c1syEtekaZ6OJrX77mGoJ.6mu4YuUjUHvKrliW8oOU3M3u7I6zyuy', 0);
 
 INSERT INTO KhachHang(HoVaTen, DienThoai, DiaChi) VALUES
-(N'Lê Thị Kim Yến', '0123456777', 'Chợ Mới'),
-(N'Võ Huỳnh Đông', '0123456555', 'Lấp Vò - Đồng Tháp'),
-(N'Nguyễn Huỳnh Minh Trí', '0123456444', 'Phú Hòa');
+(N'Lê Thị Kim Yến', '0123456777', N'Chợ Mới'),
+(N'Võ Huỳnh Đông', '0123456555', N'Lấp Vò - Đồng Tháp'),
+(N'Nguyễn Huỳnh Minh Trí', '0123456444', N'Phú Hòa');
 
 SET IDENTITY_INSERT LoaiSanPham ON
 INSERT INTO LoaiSanPham(ID, TenLoai) VALUES
@@ -77,3 +78,5 @@ INSERT INTO SanPham(LoaiSanPhamID, HangSanXuatID, TenSanPham, DonGia, SoLuong, H
 (1, 2, N'iPhone 15 Pro Max', 34990000, 100, 'iphone-15-pro-max.jpg');
 
 select * from SanPham
+select * from HoaDon
+select * from HoaDon_ChiTiet

@@ -50,6 +50,7 @@
             HoVaTen = new DataGridViewTextBoxColumn();
             DienThoai = new DataGridViewTextBoxColumn();
             DiaChi = new DataGridViewTextBoxColumn();
+            txtTimKiem = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -57,6 +58,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtTimKiem);
             groupBox1.Controls.Add(btnXoa);
             groupBox1.Controls.Add(btnSua);
             groupBox1.Controls.Add(btnXuat);
@@ -74,7 +76,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 11);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(956, 143);
+            groupBox1.Size = new Size(956, 256);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin khách hàng";
@@ -108,6 +110,7 @@
             btnXuat.TabIndex = 14;
             btnXuat.Text = "Xuất...";
             btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
             // 
             // btnNhap
             // 
@@ -117,10 +120,11 @@
             btnNhap.TabIndex = 13;
             btnNhap.Text = "Nhập...";
             btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(831, 29);
+            btnTimKiem.Location = new Point(831, 136);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(75, 23);
             btnTimKiem.TabIndex = 12;
@@ -220,7 +224,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridView);
-            groupBox2.Location = new Point(12, 160);
+            groupBox2.Location = new Point(12, 273);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(956, 278);
             groupBox2.TabIndex = 1;
@@ -238,6 +242,7 @@
             dataGridView.Location = new Point(3, 19);
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
+            dataGridView.RowHeadersWidth = 51;
             dataGridView.Size = new Size(950, 256);
             dataGridView.TabIndex = 0;
             // 
@@ -245,31 +250,42 @@
             // 
             ID.DataPropertyName = "ID";
             ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
             ID.Name = "ID";
             // 
             // HoVaTen
             // 
             HoVaTen.DataPropertyName = "HoVaTen";
             HoVaTen.HeaderText = "Họ và tên";
+            HoVaTen.MinimumWidth = 6;
             HoVaTen.Name = "HoVaTen";
             // 
             // DienThoai
             // 
             DienThoai.DataPropertyName = "DienThoai";
             DienThoai.HeaderText = "Điện thoại";
+            DienThoai.MinimumWidth = 6;
             DienThoai.Name = "DienThoai";
             // 
             // DiaChi
             // 
             DiaChi.DataPropertyName = "DiaChi";
             DiaChi.HeaderText = "Địa chỉ";
+            DiaChi.MinimumWidth = 6;
             DiaChi.Name = "DiaChi";
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Location = new Point(126, 136);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new Size(467, 23);
+            txtTimKiem.TabIndex = 17;
             // 
             // frmKhachHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(980, 450);
+            ClientSize = new Size(980, 563);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "frmKhachHang";
@@ -307,5 +323,6 @@
         private DataGridViewTextBoxColumn HoVaTen;
         private DataGridViewTextBoxColumn DienThoai;
         private DataGridViewTextBoxColumn DiaChi;
+        private TextBox txtTimKiem;
     }
 }

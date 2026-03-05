@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnXuat = new Button();
+            btnNhap = new Button();
             btnThoat = new Button();
             btnHuyBo = new Button();
             btnLuu = new Button();
@@ -48,6 +50,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnXuat);
+            groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnHuyBo);
             groupBox1.Controls.Add(btnLuu);
@@ -65,9 +69,31 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin hãng sản xuất";
             // 
+            // btnXuat
+            // 
+            btnXuat.Location = new Point(718, 85);
+            btnXuat.Margin = new Padding(3, 2, 3, 2);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(82, 22);
+            btnXuat.TabIndex = 9;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
+            // btnNhap
+            // 
+            btnNhap.Location = new Point(618, 85);
+            btnNhap.Margin = new Padding(3, 2, 3, 2);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(82, 22);
+            btnNhap.TabIndex = 8;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
+            // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(688, 88);
+            btnThoat.Location = new Point(513, 85);
             btnThoat.Margin = new Padding(3, 2, 3, 2);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(82, 22);
@@ -78,7 +104,7 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(574, 88);
+            btnHuyBo.Location = new Point(413, 85);
             btnHuyBo.Margin = new Padding(3, 2, 3, 2);
             btnHuyBo.Name = "btnHuyBo";
             btnHuyBo.Size = new Size(82, 22);
@@ -90,7 +116,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = Color.Blue;
-            btnLuu.Location = new Point(458, 88);
+            btnLuu.Location = new Point(310, 85);
             btnLuu.Margin = new Padding(3, 2, 3, 2);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(82, 22);
@@ -102,7 +128,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(354, 88);
+            btnXoa.Location = new Point(206, 85);
             btnXoa.Margin = new Padding(3, 2, 3, 2);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(82, 22);
@@ -113,7 +139,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(253, 88);
+            btnSua.Location = new Point(105, 85);
             btnSua.Margin = new Padding(3, 2, 3, 2);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(82, 22);
@@ -124,7 +150,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(158, 88);
+            btnThem.Location = new Point(10, 85);
             btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(82, 22);
@@ -157,7 +183,7 @@
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(802, 368);
+            groupBox2.Size = new Size(802, 166);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách hãng sản xuất";
@@ -176,7 +202,7 @@
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(796, 348);
+            dataGridView.Size = new Size(796, 146);
             dataGridView.TabIndex = 0;
             // 
             // ID
@@ -197,7 +223,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(845, 548);
+            ClientSize = new Size(845, 354);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Margin = new Padding(3, 2, 3, 2);
@@ -226,5 +252,7 @@
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn TenHangSanXuat;
+        private Button btnXuat;
+        private Button btnNhap;
     }
 }
