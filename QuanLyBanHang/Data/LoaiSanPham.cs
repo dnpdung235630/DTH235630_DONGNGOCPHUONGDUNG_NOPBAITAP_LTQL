@@ -10,7 +10,7 @@ namespace QuanLyBanHang.Data
     internal class LoaiSanPham
     {
         public int ID { get; set; }
-        public string TenLoai { get; set; }
+        public string TenLoai { get; set; } = string.Empty;
         public virtual ObservableCollectionListSource<SanPham> SanPham { get; } = new();
     }
 }

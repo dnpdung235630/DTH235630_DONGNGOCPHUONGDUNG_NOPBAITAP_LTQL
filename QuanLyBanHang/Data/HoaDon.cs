@@ -26,9 +26,9 @@ namespace QuanLyBanHang.Data
     {
         public int ID { get; set; }
         public int NhanVienID { get; set; }
-        public string HoVaTenNhanVien { get; set; } // Thêm
+        public string HoVaTenNhanVien { get; set; } = string.Empty;// Thêm
         public int KhachHangID { get; set; }
-        public string HoVaTenKhachHang { get; set; } // Thêm
+        public string HoVaTenKhachHang { get; set; } = string.Empty; // Thêm
         public DateTime NgayLap { get; set; }
         public string? GhiChuHoaDon { get; set; }
         public string? XemChiTiet { get; set; } // Thêm

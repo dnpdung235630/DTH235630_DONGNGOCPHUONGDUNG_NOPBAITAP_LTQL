@@ -77,3 +77,5 @@ INSERT INTO SanPham(LoaiSanPhamID, HangSanXuatID, TenSanPham, DonGia, SoLuong, H
 (1, 2, N'iPhone 15 Pro Max', 34990000, 100, 'iphone-15-pro-max.jpg');
 
 select * from SanPham
+select * from HoaDon
+select * from HoaDon_ChiTiet

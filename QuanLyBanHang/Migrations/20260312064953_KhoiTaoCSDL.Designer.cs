@@ -10,7 +10,7 @@ using QuanLyBanHang.Data;
 namespace QuanLyBanHang.Migrations
 {
     [DbContext(typeof(QLBHDbContext))]
-    [Migration("20260129075745_KhoiTaoCSDL")]
+    [Migration("20260312064953_KhoiTaoCSDL")]
     partial class KhoiTaoCSDL
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -94,31 +94,28 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(19, 16);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(22, 21);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(1132, 202);
+            groupBox1.Size = new Size(1294, 269);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin sản phẩm";
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(1015, 166);
-            btnXuat.Margin = new Padding(3, 2, 3, 2);
+            btnXuat.Location = new Point(1160, 221);
             btnXuat.Name = "btnXuat";
-            btnXuat.Size = new Size(82, 22);
+            btnXuat.Size = new Size(94, 29);
             btnXuat.TabIndex = 19;
             btnXuat.Text = "Xuất";
             btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(693, 166);
-            btnThoat.Margin = new Padding(3, 2, 3, 2);
+            btnThoat.Location = new Point(792, 221);
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(82, 22);
+            btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 19;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
@@ -126,21 +123,20 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(906, 166);
-            btnNhap.Margin = new Padding(3, 2, 3, 2);
+            btnNhap.Location = new Point(1035, 221);
             btnNhap.Name = "btnNhap";
-            btnNhap.Size = new Size(82, 22);
+            btnNhap.Size = new Size(94, 29);
             btnNhap.TabIndex = 18;
             btnNhap.Text = "Nhập";
             btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(376, 166);
-            btnXoa.Margin = new Padding(3, 2, 3, 2);
+            btnXoa.Location = new Point(430, 221);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(82, 22);
+            btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 16;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
@@ -148,10 +144,9 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(798, 166);
-            btnTimKiem.Margin = new Padding(3, 2, 3, 2);
+            btnTimKiem.Location = new Point(912, 221);
             btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.Size = new Size(82, 22);
+            btnTimKiem.Size = new Size(94, 29);
             btnTimKiem.TabIndex = 17;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
@@ -159,10 +154,9 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(584, 166);
-            btnHuyBo.Margin = new Padding(3, 2, 3, 2);
+            btnHuyBo.Location = new Point(667, 221);
             btnHuyBo.Name = "btnHuyBo";
-            btnHuyBo.Size = new Size(82, 22);
+            btnHuyBo.Size = new Size(94, 29);
             btnHuyBo.TabIndex = 18;
             btnHuyBo.Text = "Hủy bỏ";
             btnHuyBo.UseVisualStyleBackColor = true;
@@ -170,10 +164,9 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(268, 166);
-            btnSua.Margin = new Padding(3, 2, 3, 2);
+            btnSua.Location = new Point(306, 221);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(82, 22);
+            btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 15;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
@@ -181,10 +174,9 @@
             // 
             // btnLuu
             // 
-            btnLuu.Location = new Point(476, 166);
-            btnLuu.Margin = new Padding(3, 2, 3, 2);
+            btnLuu.Location = new Point(544, 221);
             btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(82, 22);
+            btnLuu.Size = new Size(94, 29);
             btnLuu.TabIndex = 17;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = true;
@@ -192,10 +184,9 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(159, 166);
-            btnThem.Margin = new Padding(3, 2, 3, 2);
+            btnThem.Location = new Point(182, 221);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(82, 22);
+            btnThem.Size = new Size(94, 29);
             btnThem.TabIndex = 14;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
@@ -203,10 +194,9 @@
             // 
             // btnDoiAnh
             // 
-            btnDoiAnh.Location = new Point(898, 28);
-            btnDoiAnh.Margin = new Padding(3, 2, 3, 2);
+            btnDoiAnh.Location = new Point(1026, 37);
             btnDoiAnh.Name = "btnDoiAnh";
-            btnDoiAnh.Size = new Size(82, 22);
+            btnDoiAnh.Size = new Size(94, 29);
             btnDoiAnh.TabIndex = 13;
             btnDoiAnh.Text = "Đổi ảnh..";
             btnDoiAnh.UseVisualStyleBackColor = true;
@@ -214,130 +204,121 @@
             // 
             // picHinhAnh
             // 
-            picHinhAnh.Location = new Point(732, 28);
-            picHinhAnh.Margin = new Padding(3, 2, 3, 2);
+            picHinhAnh.Location = new Point(837, 37);
             picHinhAnh.Name = "picHinhAnh";
-            picHinhAnh.Size = new Size(140, 117);
+            picHinhAnh.Size = new Size(160, 156);
             picHinhAnh.SizeMode = PictureBoxSizeMode.StretchImage;
             picHinhAnh.TabIndex = 12;
             picHinhAnh.TabStop = false;
             // 
             // txtMoTa
             // 
-            txtMoTa.Location = new Point(157, 124);
-            txtMoTa.Margin = new Padding(3, 2, 3, 2);
+            txtMoTa.Location = new Point(179, 165);
             txtMoTa.Name = "txtMoTa";
-            txtMoTa.Size = new Size(560, 23);
+            txtMoTa.Size = new Size(639, 27);
             txtMoTa.TabIndex = 11;
             // 
             // txtTenSanPham
             // 
-            txtTenSanPham.Location = new Point(157, 92);
-            txtTenSanPham.Margin = new Padding(3, 2, 3, 2);
+            txtTenSanPham.Location = new Point(179, 123);
             txtTenSanPham.Name = "txtTenSanPham";
-            txtTenSanPham.Size = new Size(560, 23);
+            txtTenSanPham.Size = new Size(639, 27);
             txtTenSanPham.TabIndex = 10;
             // 
             // numDonGia
             // 
-            numDonGia.Location = new Point(585, 57);
-            numDonGia.Margin = new Padding(3, 2, 3, 2);
+            numDonGia.Location = new Point(669, 76);
             numDonGia.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numDonGia.Name = "numDonGia";
-            numDonGia.Size = new Size(131, 23);
+            numDonGia.Size = new Size(150, 27);
             numDonGia.TabIndex = 9;
             numDonGia.ThousandsSeparator = true;
             // 
             // numSoLuong
             // 
-            numSoLuong.Location = new Point(585, 28);
-            numSoLuong.Margin = new Padding(3, 2, 3, 2);
+            numSoLuong.Location = new Point(669, 37);
             numSoLuong.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numSoLuong.Name = "numSoLuong";
-            numSoLuong.Size = new Size(131, 23);
+            numSoLuong.Size = new Size(150, 27);
             numSoLuong.TabIndex = 8;
             numSoLuong.ThousandsSeparator = true;
             // 
             // cboHangSanXuat
             // 
             cboHangSanXuat.FormattingEnabled = true;
-            cboHangSanXuat.Location = new Point(157, 56);
-            cboHangSanXuat.Margin = new Padding(3, 2, 3, 2);
+            cboHangSanXuat.Location = new Point(179, 75);
             cboHangSanXuat.Name = "cboHangSanXuat";
-            cboHangSanXuat.Size = new Size(294, 23);
+            cboHangSanXuat.Size = new Size(335, 28);
             cboHangSanXuat.TabIndex = 7;
             // 
             // cboLoaiSanPham
             // 
             cboLoaiSanPham.FormattingEnabled = true;
-            cboLoaiSanPham.Location = new Point(157, 27);
-            cboLoaiSanPham.Margin = new Padding(3, 2, 3, 2);
+            cboLoaiSanPham.Location = new Point(179, 36);
             cboLoaiSanPham.Name = "cboLoaiSanPham";
-            cboLoaiSanPham.Size = new Size(294, 23);
+            cboLoaiSanPham.Size = new Size(335, 28);
             cboLoaiSanPham.TabIndex = 6;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(476, 58);
+            label6.Location = new Point(544, 77);
             label6.Name = "label6";
-            label6.Size = new Size(64, 15);
+            label6.Size = new Size(82, 20);
             label6.TabIndex = 5;
             label6.Text = "Đơn giá (*)";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(476, 29);
+            label5.Location = new Point(544, 39);
             label5.Name = "label5";
-            label5.Size = new Size(70, 15);
+            label5.Size = new Size(89, 20);
             label5.TabIndex = 4;
             label5.Text = "Số lượng (*)";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(32, 127);
+            label4.Location = new Point(37, 169);
             label4.Name = "label4";
-            label4.Size = new Size(93, 15);
+            label4.Size = new Size(116, 20);
             label4.TabIndex = 3;
             label4.Text = "Mô tả sản phẩm";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(32, 94);
+            label3.Location = new Point(37, 125);
             label3.Name = "label3";
-            label3.Size = new Size(96, 15);
+            label3.Size = new Size(120, 20);
             label3.TabIndex = 2;
             label3.Text = "Tên sản phẩm (*)";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(32, 58);
+            label2.Location = new Point(37, 77);
             label2.Name = "label2";
-            label2.Size = new Size(99, 15);
+            label2.Size = new Size(123, 20);
             label2.TabIndex = 1;
             label2.Text = "Hãng sản xuất (*)";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 29);
+            label1.Location = new Point(37, 39);
             label1.Name = "label1";
-            label1.Size = new Size(72, 15);
+            label1.Size = new Size(90, 20);
             label1.TabIndex = 0;
             label1.Text = "Phân loại (*)";
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridView);
-            groupBox2.Location = new Point(21, 231);
-            groupBox2.Margin = new Padding(3, 2, 3, 2);
+            groupBox2.Location = new Point(24, 308);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(1132, 270);
+            groupBox2.Size = new Size(1294, 360);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách sản phẩm";
@@ -350,10 +331,12 @@
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Columns.AddRange(new DataGridViewColumn[] { ID, TenLoai, TenHangSanXuat, TenSanPham, SoLuong, DonGia, HinhAnh });
             dataGridView.Dock = DockStyle.Fill;
-            dataGridView.Location = new Point(3, 18);
+            dataGridView.Location = new Point(3, 23);
+            dataGridView.Margin = new Padding(3, 4, 3, 4);
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
-            dataGridView.Size = new Size(1126, 250);
+            dataGridView.RowHeadersWidth = 51;
+            dataGridView.Size = new Size(1288, 334);
             dataGridView.TabIndex = 0;
             dataGridView.CellFormatting += dataGridView_CellFormatting;
             dataGridView.DataError += dataGridView_DataError;
@@ -362,52 +345,58 @@
             // 
             ID.DataPropertyName = "ID";
             ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
             ID.Name = "ID";
             // 
             // TenLoai
             // 
             TenLoai.DataPropertyName = "TenLoai";
             TenLoai.HeaderText = "Phân loại";
+            TenLoai.MinimumWidth = 6;
             TenLoai.Name = "TenLoai";
             // 
             // TenHangSanXuat
             // 
             TenHangSanXuat.DataPropertyName = "TenHangSanXuat";
             TenHangSanXuat.HeaderText = "Hãng sản xuất";
+            TenHangSanXuat.MinimumWidth = 6;
             TenHangSanXuat.Name = "TenHangSanXuat";
             // 
             // TenSanPham
             // 
             TenSanPham.DataPropertyName = "TenSanPham";
             TenSanPham.HeaderText = "Tên sản phẩm";
+            TenSanPham.MinimumWidth = 6;
             TenSanPham.Name = "TenSanPham";
             // 
             // SoLuong
             // 
             SoLuong.DataPropertyName = "SoLuong";
             SoLuong.HeaderText = "Số lượng";
+            SoLuong.MinimumWidth = 6;
             SoLuong.Name = "SoLuong";
             // 
             // DonGia
             // 
             DonGia.DataPropertyName = "DonGia";
             DonGia.HeaderText = "Đơn giá";
+            DonGia.MinimumWidth = 6;
             DonGia.Name = "DonGia";
             // 
             // HinhAnh
             // 
             HinhAnh.DataPropertyName = "HinhAnh";
             HinhAnh.HeaderText = "Hình ảnh";
+            HinhAnh.MinimumWidth = 6;
             HinhAnh.Name = "HinhAnh";
             // 
             // frmSanPham
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1170, 510);
+            ClientSize = new Size(1337, 680);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "frmSanPham";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sản phẩm";

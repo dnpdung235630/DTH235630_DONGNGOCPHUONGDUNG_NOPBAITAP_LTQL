@@ -1,18 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ClosedXML.Excel;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+//using Microsoft.Office.Interop.Excel;
 using QuanLyBanHang.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using Microsoft.Office.Interop.Excel;
-using System.IO;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace QuanLyBanHang.Forms
 {
@@ -152,7 +152,7 @@ namespace QuanLyBanHang.Forms
         }
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            if (dataGridView.Rows.Count > 0)
+            /*if (dataGridView.Rows.Count > 0)
             {
                 //Khởi tạo savefiledialog để chọn nơi lưu
                 SaveFileDialog sfd = new SaveFileDialog();
@@ -166,7 +166,7 @@ namespace QuanLyBanHang.Forms
                     string filePath = sfd.FileName;
                     ExportToExcel(filePath);
                 }
-                /*Excel.Application excelApp = new Excel.Application();
+                Excel.Application excelApp = new Excel.Application();
                 excelApp.Application.Workbooks.Add(Type.Missing);
                 for (int i = 1; i < dataGridView.Rows.Count + 1; i++)
                 {
@@ -182,12 +182,79 @@ namespace QuanLyBanHang.Forms
                 }
                 excelApp.Columns.AutoFit();
                 excelApp.Visible = true;
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);*/
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
             }
             else
             {
                 MessageBox.Show("Không có dữ liệu để xuất!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            } tự làm*/
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Xuất dữ liệu ra tập tin Excel";
+            saveFileDialog.Filter = "Tập tin Excel|*.xls;*.xlsx";
+            saveFileDialog.FileName = "HoaDon_" + DateTime.Now.ToShortDateString().Replace("/", "_") + ".xlsx";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // --- SHEET 1: HOA DON ---
+                    DataTable dtHoaDon = new DataTable();
+                    dtHoaDon.Columns.AddRange(new DataColumn[5] {
+                    new DataColumn("ID", typeof(int)),
+                    new DataColumn("Nhân viên", typeof(string)),
+                    new DataColumn("Khách hàng", typeof(string)),
+                    new DataColumn("Ngày lập", typeof(DateTime)),
+                    new DataColumn("Ghi chú", typeof(string))
+                });
+
+                    var hoaDon = context.HoaDon.ToList();
+                    foreach (var hd in hoaDon)
+                    {
+                        // Lấy tên thay vì ID để file Excel dễ đọc hơn
+                        dtHoaDon.Rows.Add(hd.ID, hd.NhanVien?.HoVaTen, hd.KhachHang?.HoVaTen, hd.NgayLap, hd.GhiChuHoaDon);
+                    }
+
+                    // --- SHEET 2: CHI TIET HOA DON ---
+                    DataTable dtChiTiet = new DataTable();
+                    dtChiTiet.Columns.AddRange(new DataColumn[5] {
+                    new DataColumn("ID", typeof(int)),
+                    new DataColumn("Tên sản phẩm", typeof(string)),
+                    new DataColumn("Số lượng", typeof(int)),
+                    new DataColumn("Đơn giá", typeof(int)),
+                    new DataColumn("Thành tiền", typeof(int))
+                });
+
+                    var hoaDon_ChiTiet = context.HoaDon_ChiTiet.ToList();
+                    foreach (var ct in hoaDon_ChiTiet)
+                    {
+                        dtChiTiet.Rows.Add(
+                            ct.HoaDonID,
+                            ct.SanPham?.TenSanPham,
+                            ct.SoLuongBan,
+                            ct.DonGiaBan,
+                            ct.SoLuongBan * ct.DonGiaBan
+                        );
+                    }
+
+                    // --- XUẤT FILE EXCEL VỚI 2 SHEET ---
+                    using (XLWorkbook wb = new XLWorkbook())
+                    {
+                        // Thêm sheet Hóa Đơn
+                        var sheet1 = wb.Worksheets.Add(dtHoaDon, "HoaDon");
+                        sheet1.Columns().AdjustToContents();
+
+                        // Thêm sheet Chi Tiết Hóa Đơn
+                        var sheet2 = wb.Worksheets.Add(dtChiTiet, "HoaDon_ChiTiet");
+                        sheet2.Columns().AdjustToContents();
+
+                        wb.SaveAs(saveFileDialog.FileName);
+                        MessageBox.Show("Đã xuất dữ liệu ra 2 sheet Excel thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

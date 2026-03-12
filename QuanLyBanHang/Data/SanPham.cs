@@ -13,11 +13,11 @@ namespace QuanLyBanHang.Data
         public int ID { get; set; }
         public int HangSanXuatID { get; set; }
         [NotMapped]
-        public string TenHangSanXuat { get; set; }
+        public string TenHangSanXuat { get; set; } = string.Empty;
         public int LoaiSanPhamID { get; set; }
         [NotMapped]
-        public string TenLoai { get; set; }
-        public string TenSanPham { get; set; }
+        public string TenLoai { get; set; } = string.Empty;
+        public string TenSanPham { get; set; } = string.Empty;
         public int DonGia { get; set; }
         public int SoLuong { get; set; }
         public string? HinhAnh { get; set; }
@@ -33,11 +33,11 @@ namespace QuanLyBanHang.Data
         public int ID { get; set; }
         public int HangSanXuatID { get; set; }
         [NotMapped]
-        public string TenHangSanXuat { get; set; }  // Thêm 
+        public string TenHangSanXuat { get; set; } = string.Empty; // Thêm 
         public int LoaiSanPhamID { get; set; }
         [NotMapped]
-        public string TenLoai { get; set; }         // Thêm 
-        public string TenSanPham { get; set; }
+        public string TenLoai { get; set; } = string.Empty;       // Thêm 
+        public string TenSanPham { get; set; } = string.Empty;
         public int DonGia { get; set; }
         public int SoLuong { get; set; }
         public string? HinhAnh { get; set; }
