@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 //using Microsoft.Office.Interop.Excel;
 using QuanLyBanHang.Data;
+using QuanLyBanHang.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -254,7 +255,7 @@ namespace QuanLyBanHang.Forms
                 {
                     MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } 
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -292,8 +293,18 @@ namespace QuanLyBanHang.Forms
 
             if (ketQua.Count == 0)
             {
-                MessageBox.Show("Không tìm thấy kết quả phù hợp.","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            id = Convert.ToInt32(dataGridView.CurrentRow.Cells["ID"].Value.ToString());
+            using (frmInHoaDon inHoaDon = new frmInHoaDon(id))
+            {
+                inHoaDon.ShowDialog();
+            }
+
         }
     }
 }

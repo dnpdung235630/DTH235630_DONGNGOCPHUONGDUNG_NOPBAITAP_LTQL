@@ -140,6 +140,7 @@
             btnInHoaDon.TabIndex = 2;
             btnInHoaDon.Text = "In hóa đơn";
             btnInHoaDon.UseVisualStyleBackColor = true;
+            btnInHoaDon.Click += btnInHoaDon_Click;
             // 
             // btnSua
             // 

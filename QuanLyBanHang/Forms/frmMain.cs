@@ -23,6 +23,7 @@ namespace QuanLyBanHang.Forms
         frmHoaDon hoaDon = null;
         frmDangNhap dangNhap = null;
         string hoVaTenNhanVien = ""; // Lấy tên người dùng hiển thị vào thanh Status.
+
         public frmMain()
         {
             InitializeComponent();

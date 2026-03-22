@@ -43,6 +43,7 @@
             dataGridView = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             TenHangSanXuat = new DataGridViewTextBoxColumn();
+            helpProvider = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -151,8 +152,10 @@
             // 
             // txtTenHangSanXuat
             // 
+            helpProvider.SetHelpString(txtTenHangSanXuat, "Vui lòng nhập tên hãng sản xuất");
             txtTenHangSanXuat.Location = new Point(178, 53);
             txtTenHangSanXuat.Name = "txtTenHangSanXuat";
+            helpProvider.SetShowHelp(txtTenHangSanXuat, true);
             txtTenHangSanXuat.Size = new Size(702, 27);
             txtTenHangSanXuat.TabIndex = 1;
             // 
@@ -239,5 +242,6 @@
         private DataGridViewTextBoxColumn TenHangSanXuat;
         private Button btnXuat;
         private Button btnNhap;
+        private HelpProvider helpProvider;
     }
 }

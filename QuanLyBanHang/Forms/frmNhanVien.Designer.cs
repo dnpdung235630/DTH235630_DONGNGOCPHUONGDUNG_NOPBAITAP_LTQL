@@ -59,6 +59,7 @@
             TenDangNhap = new DataGridViewTextBoxColumn();
             MatKhau = new DataGridViewTextBoxColumn();
             QuyenHan = new DataGridViewTextBoxColumn();
+            helpProvider = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -99,10 +100,12 @@
             // cboQuyenHan
             // 
             cboQuyenHan.FormattingEnabled = true;
+            helpProvider.SetHelpString(cboQuyenHan, "Vui lòng chọn quyền hạn");
             cboQuyenHan.Items.AddRange(new object[] { "Quản lý", "Nhân viên" });
             cboQuyenHan.Location = new Point(498, 156);
             cboQuyenHan.Margin = new Padding(3, 4, 3, 4);
             cboQuyenHan.Name = "cboQuyenHan";
+            helpProvider.SetShowHelp(cboQuyenHan, true);
             cboQuyenHan.Size = new Size(191, 28);
             cboQuyenHan.TabIndex = 22;
             // 
@@ -208,41 +211,51 @@
             // 
             // txtMatKhau
             // 
+            helpProvider.SetHelpString(txtMatKhau, "Vui lòng nhập mật khẩu");
             txtMatKhau.Location = new Point(498, 101);
             txtMatKhau.Margin = new Padding(3, 4, 3, 4);
             txtMatKhau.Name = "txtMatKhau";
+            helpProvider.SetShowHelp(txtMatKhau, true);
             txtMatKhau.Size = new Size(191, 27);
             txtMatKhau.TabIndex = 11;
             // 
             // txtTenDangNhap
             // 
+            helpProvider.SetHelpString(txtTenDangNhap, "Vui lòng nhập tên đăng nhập");
             txtTenDangNhap.Location = new Point(498, 43);
             txtTenDangNhap.Margin = new Padding(3, 4, 3, 4);
             txtTenDangNhap.Name = "txtTenDangNhap";
+            helpProvider.SetShowHelp(txtTenDangNhap, true);
             txtTenDangNhap.Size = new Size(191, 27);
             txtTenDangNhap.TabIndex = 10;
             // 
             // txtDiaChi
             // 
+            helpProvider.SetHelpString(txtDiaChi, "Vui lòng nhập địa chỉ của nhân viên");
             txtDiaChi.Location = new Point(136, 156);
             txtDiaChi.Margin = new Padding(3, 4, 3, 4);
             txtDiaChi.Name = "txtDiaChi";
+            helpProvider.SetShowHelp(txtDiaChi, true);
             txtDiaChi.Size = new Size(189, 27);
             txtDiaChi.TabIndex = 9;
             // 
             // txtDienThoai
             // 
+            helpProvider.SetHelpString(txtDienThoai, "Vui lòng nhập số điện thoại của nhân viên");
             txtDienThoai.Location = new Point(136, 101);
             txtDienThoai.Margin = new Padding(3, 4, 3, 4);
             txtDienThoai.Name = "txtDienThoai";
+            helpProvider.SetShowHelp(txtDienThoai, true);
             txtDienThoai.Size = new Size(189, 27);
             txtDienThoai.TabIndex = 8;
             // 
             // txtHoVaTen
             // 
+            helpProvider.SetHelpString(txtHoVaTen, "Vui lòng nhập họ tên nhân viên");
             txtHoVaTen.Location = new Point(136, 41);
             txtHoVaTen.Margin = new Padding(3, 4, 3, 4);
             txtHoVaTen.Name = "txtHoVaTen";
+            helpProvider.SetShowHelp(txtHoVaTen, true);
             txtHoVaTen.Size = new Size(189, 27);
             txtHoVaTen.TabIndex = 7;
             // 
@@ -376,6 +389,10 @@
             QuyenHan.MinimumWidth = 6;
             QuyenHan.Name = "QuyenHan";
             // 
+            // helpProvider
+            // 
+            helpProvider.HelpNamespace = "E:\\Subjects\\lập trình quản lý\\QuanLyBanHang\\QuanLyBanHang\\HelpProvider\\nhanvien.html";
+            // 
             // frmNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -428,5 +445,6 @@
         private DataGridViewTextBoxColumn TenDangNhap;
         private DataGridViewTextBoxColumn MatKhau;
         private DataGridViewTextBoxColumn QuyenHan;
+        private HelpProvider helpProvider;
     }
 }

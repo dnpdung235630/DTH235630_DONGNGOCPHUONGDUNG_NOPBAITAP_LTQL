@@ -61,6 +61,7 @@
             SoLuong = new DataGridViewTextBoxColumn();
             DonGia = new DataGridViewTextBoxColumn();
             HinhAnh = new DataGridViewImageColumn();
+            helpProvider = new HelpProvider();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picHinhAnh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDonGia).BeginInit();
@@ -220,25 +221,31 @@
             // 
             // txtTenSanPham
             // 
+            helpProvider.SetHelpString(txtTenSanPham, "Vui lòng nhập tên sản phẩm");
             txtTenSanPham.Location = new Point(179, 123);
             txtTenSanPham.Name = "txtTenSanPham";
+            helpProvider.SetShowHelp(txtTenSanPham, true);
             txtTenSanPham.Size = new Size(639, 27);
             txtTenSanPham.TabIndex = 10;
             // 
             // numDonGia
             // 
+            helpProvider.SetHelpString(numDonGia, "Vui lòng chọn đơn giá cho sản phẩm");
             numDonGia.Location = new Point(669, 76);
             numDonGia.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numDonGia.Name = "numDonGia";
+            helpProvider.SetShowHelp(numDonGia, true);
             numDonGia.Size = new Size(150, 27);
             numDonGia.TabIndex = 9;
             numDonGia.ThousandsSeparator = true;
             // 
             // numSoLuong
             // 
+            helpProvider.SetHelpString(numSoLuong, "Vui lòng chọn số lượng");
             numSoLuong.Location = new Point(669, 37);
             numSoLuong.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numSoLuong.Name = "numSoLuong";
+            helpProvider.SetShowHelp(numSoLuong, true);
             numSoLuong.Size = new Size(150, 27);
             numSoLuong.TabIndex = 8;
             numSoLuong.ThousandsSeparator = true;
@@ -246,16 +253,20 @@
             // cboHangSanXuat
             // 
             cboHangSanXuat.FormattingEnabled = true;
+            helpProvider.SetHelpString(cboHangSanXuat, "Vui lòng chọn tên hãng sản xuất");
             cboHangSanXuat.Location = new Point(179, 75);
             cboHangSanXuat.Name = "cboHangSanXuat";
+            helpProvider.SetShowHelp(cboHangSanXuat, true);
             cboHangSanXuat.Size = new Size(335, 28);
             cboHangSanXuat.TabIndex = 7;
             // 
             // cboLoaiSanPham
             // 
             cboLoaiSanPham.FormattingEnabled = true;
+            helpProvider.SetHelpString(cboLoaiSanPham, "Vui lòng chọn tên loại sản phẩm");
             cboLoaiSanPham.Location = new Point(179, 36);
             cboLoaiSanPham.Name = "cboLoaiSanPham";
+            helpProvider.SetShowHelp(cboLoaiSanPham, true);
             cboLoaiSanPham.Size = new Size(335, 28);
             cboLoaiSanPham.TabIndex = 6;
             // 
@@ -390,6 +401,10 @@
             HinhAnh.MinimumWidth = 6;
             HinhAnh.Name = "HinhAnh";
             // 
+            // helpProvider
+            // 
+            helpProvider.HelpNamespace = "E:\\Subjects\\lập trình quản lý\\QuanLyBanHang\\QuanLyBanHang\\HelpProvider\\SanPham.htm";
+            // 
             // frmSanPham
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -397,6 +412,9 @@
             ClientSize = new Size(1337, 680);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            HelpButton = true;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmSanPham";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sản phẩm";
@@ -446,5 +464,6 @@
         private DataGridViewTextBoxColumn SoLuong;
         private DataGridViewTextBoxColumn DonGia;
         private DataGridViewImageColumn HinhAnh;
+        private HelpProvider helpProvider;
     }
 }

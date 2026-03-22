@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.InkML;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,11 @@ namespace QuanLyBanHang.Forms
             InitializeComponent();
         }
 
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
@@ -24,16 +30,10 @@ namespace QuanLyBanHang.Forms
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
+
             this.DialogResult = DialogResult.Cancel;
+
         }
 
-        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnDangNhap_Click(sender, e);
-            }
-        }
     }
 }
-

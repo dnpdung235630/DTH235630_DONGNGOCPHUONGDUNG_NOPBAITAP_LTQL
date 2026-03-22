@@ -35,57 +35,61 @@
             txtMatKhau = new TextBox();
             btnDangNhap = new Button();
             btnHuyBo = new Button();
+            helpProvider = new HelpProvider();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(419, 86);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(453, 77);
             label1.Name = "label1";
-            label1.Size = new Size(193, 40);
+            label1.Size = new Size(200, 41);
             label1.TabIndex = 0;
             label1.Text = "ĐĂNG NHẬP";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(373, 159);
+            label2.Location = new Point(388, 145);
             label2.Name = "label2";
-            label2.Size = new Size(88, 15);
+            label2.Size = new Size(110, 20);
             label2.TabIndex = 1;
             label2.Text = "Tên đăng nhập:";
             // 
             // txtTenDangNhap
             // 
-            txtTenDangNhap.Location = new Point(373, 195);
+            helpProvider.SetHelpString(txtTenDangNhap, "Vui lòng nhập tên đăng nhập");
+            txtTenDangNhap.Location = new Point(390, 189);
             txtTenDangNhap.Name = "txtTenDangNhap";
-            txtTenDangNhap.Size = new Size(293, 23);
+            helpProvider.SetShowHelp(txtTenDangNhap, true);
+            txtTenDangNhap.Size = new Size(339, 27);
             txtTenDangNhap.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(373, 246);
+            label3.Location = new Point(389, 271);
             label3.Name = "label3";
-            label3.Size = new Size(60, 15);
+            label3.Size = new Size(73, 20);
             label3.TabIndex = 3;
             label3.Text = "Mật khẩu:";
             // 
             // txtMatKhau
             // 
-            txtMatKhau.Location = new Point(373, 288);
+            helpProvider.SetHelpString(txtMatKhau, "Vui lòng nhập mật khẩu");
+            txtMatKhau.Location = new Point(392, 334);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.PasswordChar = '*';
-            txtMatKhau.Size = new Size(293, 23);
+            helpProvider.SetShowHelp(txtMatKhau, true);
+            txtMatKhau.Size = new Size(337, 27);
             txtMatKhau.TabIndex = 4;
-            txtMatKhau.KeyDown += txtMatKhau_KeyDown;
             // 
             // btnDangNhap
             // 
-            btnDangNhap.Location = new Point(373, 342);
+            btnDangNhap.Location = new Point(412, 403);
             btnDangNhap.Name = "btnDangNhap";
-            btnDangNhap.Size = new Size(119, 23);
+            btnDangNhap.Size = new Size(94, 29);
             btnDangNhap.TabIndex = 5;
             btnDangNhap.Text = "Đăng nhập";
             btnDangNhap.UseVisualStyleBackColor = true;
@@ -93,9 +97,9 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(547, 342);
+            btnHuyBo.Location = new Point(592, 403);
             btnHuyBo.Name = "btnHuyBo";
-            btnHuyBo.Size = new Size(119, 23);
+            btnHuyBo.Size = new Size(94, 29);
             btnHuyBo.TabIndex = 6;
             btnHuyBo.Text = "Hủy bỏ";
             btnHuyBo.UseVisualStyleBackColor = true;
@@ -103,7 +107,7 @@
             // 
             // frmDangNhap
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnHuyBo);
@@ -119,6 +123,7 @@
             Name = "frmDangNhap";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng nhập";
+            Load += frmDangNhap_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -132,5 +137,6 @@
         public TextBox txtMatKhau;
         private Button btnDangNhap;
         private Button btnHuyBo;
+        private HelpProvider helpProvider;
     }
 }

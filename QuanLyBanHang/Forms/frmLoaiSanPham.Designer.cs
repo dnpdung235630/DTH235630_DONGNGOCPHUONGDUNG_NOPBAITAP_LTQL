@@ -41,6 +41,7 @@
             txtTenLoai = new TextBox();
             groupBox2 = new GroupBox();
             dataGridView = new DataGridView();
+            helpProvider = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -158,8 +159,11 @@
             // 
             // txtTenLoai
             // 
+            helpProvider.SetHelpKeyword(txtTenLoai, "");
+            helpProvider.SetHelpString(txtTenLoai, "Vui lòng nhập tên loại sản phẩm");
             txtTenLoai.Location = new Point(211, 53);
             txtTenLoai.Name = "txtTenLoai";
+            helpProvider.SetShowHelp(txtTenLoai, true);
             txtTenLoai.Size = new Size(687, 27);
             txtTenLoai.TabIndex = 0;
             // 
@@ -220,5 +224,6 @@
         private DataGridView dataGridView;
         private Button btnXuat;
         private Button btnNhap;
+        private HelpProvider helpProvider;
     }
 }

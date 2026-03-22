@@ -50,6 +50,7 @@
             HoVaTen = new DataGridViewTextBoxColumn();
             DienThoai = new DataGridViewTextBoxColumn();
             DiaChi = new DataGridViewTextBoxColumn();
+            helpProvider = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -184,25 +185,34 @@
             // 
             // txtDienThoai
             // 
+            helpProvider.SetHelpKeyword(txtDienThoai, "");
+            helpProvider.SetHelpString(txtDienThoai, "Vui lòng nhập số điện thoại khách hàng");
             txtDienThoai.Location = new Point(502, 45);
             txtDienThoai.Margin = new Padding(3, 4, 3, 4);
             txtDienThoai.Name = "txtDienThoai";
+            helpProvider.SetShowHelp(txtDienThoai, true);
             txtDienThoai.Size = new Size(175, 27);
             txtDienThoai.TabIndex = 5;
             // 
             // txtDiaChi
             // 
+            helpProvider.SetHelpKeyword(txtDiaChi, "");
+            helpProvider.SetHelpString(txtDiaChi, "Vui lòng nhập địa chỉ khách hàng");
             txtDiaChi.Location = new Point(144, 115);
             txtDiaChi.Margin = new Padding(3, 4, 3, 4);
             txtDiaChi.Name = "txtDiaChi";
+            helpProvider.SetShowHelp(txtDiaChi, true);
             txtDiaChi.Size = new Size(533, 27);
             txtDiaChi.TabIndex = 4;
             // 
             // txtHoVaTen
             // 
+            helpProvider.SetHelpKeyword(txtHoVaTen, "");
+            helpProvider.SetHelpString(txtHoVaTen, "Vui lòng nhập họ tên khách hàng");
             txtHoVaTen.Location = new Point(144, 44);
             txtHoVaTen.Margin = new Padding(3, 4, 3, 4);
             txtHoVaTen.Name = "txtHoVaTen";
+            helpProvider.SetShowHelp(txtHoVaTen, true);
             txtHoVaTen.Size = new Size(274, 27);
             txtHoVaTen.TabIndex = 3;
             // 
@@ -332,5 +342,6 @@
         private DataGridViewTextBoxColumn HoVaTen;
         private DataGridViewTextBoxColumn DienThoai;
         private DataGridViewTextBoxColumn DiaChi;
+        private HelpProvider helpProvider;
     }
 }
